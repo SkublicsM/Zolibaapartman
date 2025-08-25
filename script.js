@@ -166,7 +166,12 @@ document.addEventListener("DOMContentLoaded", () => {
       priceItem2:"2 szobás lakás: 45.000 Ft/éj-től",
       calendarTitle:"Foglalási naptár",
       bookingLabel:"Foglalás (Booking.com):",
-      bookingLink:"Foglaljon a Booking.com-on"
+      bookingLink:"Foglaljon a Booking.com-on",
+      huLabel:"Magyar ",
+      enLabel:"Angol ",
+      gaborneName:"Skublics Gáborné",
+      gaborName:"Skublics Gábor",
+      markName:"Skublics Mark"
     },
     en: {
       contact:"Contact", email:"Email:", phone:"Phone:", english:"We speak English!", weSpeak:"", prices:"Prices", booking:"Booking", gallery:"Gallery", apartman:"Apartment", calendar:"Booking Calendar", map:"Where is the apartment?", cta:"Contact us!", heading:"ZOLIBA' Apartment", gallerySubtitle:"View photos of our apartments!", bookingInfo:"You can check available dates in the calendar below:",
@@ -187,7 +192,12 @@ document.addEventListener("DOMContentLoaded", () => {
       priceItem2:"2 bedroom apartment: from 45,000 HUF/night",
       calendarTitle:"Booking Calendar",
       bookingLabel:"Reservation (Booking.com):",
-      bookingLink:"Reserve on Booking.com"
+      bookingLink:"Reserve on Booking.com",
+      huLabel:"Hungarian ",
+      enLabel:"English ",
+      gaborneName:"Mrs. Gabor Skublics",
+      gaborName:"Gabor Skublics",
+      markName:"Mark Skublics"
     }
   };
 
@@ -253,6 +263,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const weSpeakSpan = document.querySelector('.i18n-we-speak'); if(weSpeakSpan && translations[lang].weSpeak!==undefined) weSpeakSpan.textContent = translations[lang].weSpeak || translations[lang].english;
     const bookingLabel = document.querySelector('.i18n-booking-label'); if(bookingLabel && translations[lang].bookingLabel) bookingLabel.textContent = translations[lang].bookingLabel;
     const bookingLink = document.querySelector('.i18n-booking-link'); if(bookingLink && translations[lang].bookingLink) bookingLink.textContent = translations[lang].bookingLink;
+    // Replace single-element badge updates with all matching elements
+    document.querySelectorAll('.i18n-hu-label').forEach(el=>{ if(translations[lang].huLabel) el.textContent = translations[lang].huLabel; });
+    document.querySelectorAll('.i18n-en-label').forEach(el=>{ if(translations[lang].enLabel) el.textContent = translations[lang].enLabel; });
+    const gaborne = document.querySelector('.i18n-gaborne-name'); if(gaborne && translations[lang].gaborneName) gaborne.textContent = translations[lang].gaborneName;
+    const gabor = document.querySelector('.i18n-gabor-name'); if(gabor && translations[lang].gaborName) gabor.textContent = translations[lang].gaborName;
+    const mark = document.querySelector('.i18n-mark-name'); if(mark && translations[lang].markName) mark.textContent = translations[lang].markName;
     document.documentElement.lang = lang;
   }
 
