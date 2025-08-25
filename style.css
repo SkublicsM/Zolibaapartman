@@ -1046,3 +1046,29 @@ header h1 {
   .modal-content { max-width:94vw; max-height:70vh; }
 }
 /* --- End Fullscreen Gallery Modal Override --- */
+
+/* --- Sharper Navbar & Footer Corners Override (reduced rounding) --- */
+.navbar { border-radius:0 0 2px 2px !important; }
+footer { border-top-left-radius:6px !important; border-top-right-radius:6px !important; }
+/* --- End Sharper Corners Override --- */
+
+/* --- Global Sharper Corners Minimal Override --- */
+header { border-bottom-left-radius:8px !important; border-bottom-right-radius:8px !important; }
+section, .features, .features p, .features ul, .features form, .features .feature-block, .feature-block,
+.gallery-grid, .gallery-grid img,
+.contact-card, .contact-cards.minimal .contact-card, .contact-min li,
+.modal-content, .navbar ul li a,
+.cta, button, input, textarea { border-radius:4px !important; }
+.contact-card .contact-label, .contact-min .contact-badge, .contact-min .contact-label, .lang-opt { border-radius:4px !important; }
+footer { border-top-left-radius:4px !important; border-top-right-radius:4px !important; }
+.navbar { border-radius:0 0 2px 2px !important; }
+/* --- End Global Sharper Corners Minimal Override --- */
+
+/* --- Header Sharper Corners Final Override --- */
+header { border-bottom-left-radius:2px !important; border-bottom-right-radius:2px !important; }
+@media (max-width:700px){ header { border-bottom-left-radius:2px !important; border-bottom-right-radius:2px !important; } }
+/* --- End Header Sharper Corners Final Override --- */
+
+/* --- Back to Top Button Circular Override --- */
+#toTop { border-radius:50% !important; }
+/* --- End Back to Top Button Circular Override --- */
