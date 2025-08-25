@@ -954,3 +954,85 @@ header h1 {
   color:#ffffff !important; 
   text-shadow:0 3px 12px rgba(0,0,0,0.35); 
 }
+
+/* --- Contact Cards Modern Styles --- */
+.contact-block { display:flex; flex-direction:column; gap:22px; }
+.contact-cards { display:flex; gap:24px; flex-wrap:wrap; }
+.contact-card { flex:1 1 260px; background:var(--panel-bg,#fff); border:1px solid var(--panel-border,#DDD6CE); padding:18px 20px 22px; border-radius:14px; box-shadow:0 4px 14px rgba(0,0,0,0.06); position:relative; overflow:hidden; display:flex; flex-direction:column; gap:10px; }
+.contact-card:before { content:""; position:absolute; inset:0; background:linear-gradient(140deg,rgba(176,169,159,0.12),rgba(58,53,47,0.06)); opacity:0; transition:.4s opacity; }
+.contact-card:hover:before { opacity:1; }
+.contact-card h3 { margin:0 0 4px; font-size:1.15rem; font-weight:600; color:var(--heading-color,#2f2a25); }
+.contact-card .contact-label { align-self:flex-start; font-size:.65rem; letter-spacing:.08em; font-weight:600; text-transform:uppercase; background:var(--accent,#B0A99F); color:#fff; padding:5px 10px 4px; border-radius:30px; box-shadow:0 2px 6px rgba(0,0,0,0.08); }
+.contact-card .badge-en { background:var(--accent-hover,#3a352f); color:#fff; }
+.contact-card .badge-hu { background:var(--accent,#B0A99F); }
+.contact-card a.contact-phone { font-size:1.05rem; font-weight:600; color:var(--accent-hover,#3a352f); text-decoration:none; background:var(--accent-alt,#DDD6CE); padding:10px 14px; border-radius:10px; display:inline-flex; align-items:center; gap:10px; transition:.25s background,.25s color,.25s box-shadow; box-shadow:0 2px 6px rgba(0,0,0,0.04); }
+.contact-card a.contact-phone:before { content:"\260E"; font-size:1.1rem; }
+.contact-card a.contact-phone:hover { background:var(--accent-hover,#3a352f); color:#fff; box-shadow:0 4px 12px rgba(0,0,0,0.12); }
+@media (max-width:700px){ .contact-cards { flex-direction:column; gap:16px; } .contact-card { padding:16px 16px 20px; } }
+/* --- End Contact Cards Modern Styles --- */
+
+/* --- Minimal Contact Cards Refresh --- */
+.contact-cards.minimal { display:flex; flex-wrap:wrap; gap:18px; padding:4px 0; }
+.contact-cards.minimal .contact-card { flex:1 1 240px; background:#fff; border:1px solid var(--panel-border,#DDD6CE); border-radius:12px; padding:14px 16px 16px; box-shadow:0 2px 6px rgba(0,0,0,0.04); display:flex; flex-direction:column; gap:6px; position:relative; transition:.25s box-shadow,.25s border-color,.25s transform; }
+.contact-cards.minimal .contact-card:hover { box-shadow:0 4px 14px rgba(0,0,0,0.10); border-color:var(--accent,#B0A99F); transform:translateY(-2px); }
+.contact-cards.minimal .contact-card h3 { margin:0; font-size:1.02rem; font-weight:600; letter-spacing:.01em; color:var(--heading-color,#2f2a25); }
+.contact-cards.minimal .contact-card .contact-label { font-size:.58rem; letter-spacing:.10em; font-weight:600; text-transform:uppercase; background:var(--accent-alt,#DDD6CE); color:var(--accent-hover,#3a352f); padding:4px 8px 3px; border-radius:24px; display:inline-block; }
+.contact-cards.minimal .contact-card .badge-en { background:var(--accent-hover,#3a352f); color:#fff; }
+.contact-cards.minimal .contact-card .badge-hu { background:var(--accent,#B0A99F); color:#fff; }
+.contact-cards.minimal .contact-card a { text-decoration:none; font-weight:600; font-size:.95rem; color:var(--accent-hover,#3a352f); word-break:break-all; }
+.contact-cards.minimal .contact-card a:hover { text-decoration:underline; }
+.contact-cards.minimal .email-card a.contact-email { font-weight:500; }
+@media (max-width:700px){ .contact-cards.minimal { flex-direction:column; } }
+/* --- End Minimal Contact Cards Refresh --- */
+
+/* --- Ultra Minimal Contact List --- */
+.contact-min { list-style:none; margin:4px 0 0; padding:0; display:flex; flex-direction:column; gap:4px; }
+.contact-min li { display:flex; flex-wrap:wrap; align-items:center; gap:10px; padding:4px 0 6px; border-bottom:1px solid var(--panel-border,#DDD6CE); font-size:.9rem; }
+.contact-min li:last-child { border-bottom:none; }
+.contact-min .contact-badge { font-size:.52rem; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--accent-hover,#3a352f); background:none; padding:0; }
+.contact-min a.contact-phone { color:var(--accent-hover,#3a352f); text-decoration:none; font-weight:500; font-size:.9rem; }
+.contact-min a.contact-phone:hover, .contact-min a.contact-phone:focus { text-decoration:underline; }
+@media (max-width:700px){ .contact-min li { gap:6px; font-size:.88rem; } }
+/* --- End Ultra Minimal Contact List --- */
+
+/* --- Colored Contact Badges --- */
+.contact-min .contact-badge { background:var(--accent,#B0A99F); color:#fff; padding:4px 8px 3px; border-radius:18px; font-size:.55rem; }
+.contact-min .i18n-en-label { background:var(--accent-hover,#3a352f); }
+/* Hover emphasis */
+.contact-min li:hover .contact-badge { filter:brightness(0.92); }
+/* --- End Colored Contact Badges --- */
+
+/* --- Bold contact names --- */
+.contact-min .i18n-gaborne-name,
+.contact-min .i18n-gabor-name,
+.contact-min .i18n-mark-name { font-weight:700; }
+/* --- End bold contact names --- */
+
+/* --- Contact Minimal List Larger Text Override --- */
+.contact-min { font-size:1rem; }
+.contact-min li { font-size:1rem; }
+.contact-min .i18n-gaborne-name,
+.contact-min .i18n-gabor-name,
+.contact-min .i18n-mark-name { font-size:1.08rem; }
+.contact-min a.contact-phone { font-size:1.02rem; }
+.contact-min .contact-badge { font-size:.62rem; }
+@media (max-width:700px){
+  .contact-min { font-size:1.02rem; }
+  .contact-min .i18n-gaborne-name,
+  .contact-min .i18n-gabor-name,
+  .contact-min .i18n-mark-name { font-size:1.12rem; }
+  .contact-min a.contact-phone { font-size:1.06rem; }
+}
+/* --- End Contact Minimal List Larger Text Override --- */
+
+/* --- Contact Line Layout --- */
+.contact-min li { flex-direction:column; align-items:flex-start; }
+.contact-min .contact-name { display:block; margin:4px 0 2px; }
+.contact-min .contact-line { display:flex; align-items:center; gap:6px; line-height:1.4; margin:2px 0; }
+.contact-min .contact-label { font-size:.60rem; letter-spacing:.18em; text-transform:uppercase; font-weight:600; color:var(--accent-hover,#3a352f); background:var(--accent-alt,#DDD6CE); padding:3px 6px 2px; border-radius:10px; }
+.contact-min .contact-email { text-decoration:none; color:var(--accent-hover,#3a352f); font-weight:500; }
+.contact-min .contact-email:hover, .contact-min .contact-email:focus { text-decoration:underline; }
+@media (max-width:700px){
+  .contact-min .contact-line { flex-wrap:wrap; }
+}
+/* --- End Contact Line Layout --- */
