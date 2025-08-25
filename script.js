@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.querySelector('.navbar');
   const header = document.getElementById('home');
   let lastScrolled = false;
+  let lastScrollYMobile = window.scrollY;
   function onScroll() {
     const headerBottom = header.getBoundingClientRect().bottom;
     const shouldBeScrolled = headerBottom <= 0;
@@ -11,8 +12,24 @@ document.addEventListener("DOMContentLoaded", () => {
       lastScrolled = shouldBeScrolled;
     }
   }
-  window.addEventListener('scroll', onScroll);
+  function handleMobileHide(){
+    // Unified auto-hide for all viewport widths
+    const menuOpen = document.querySelector('.navbar-menu')?.classList.contains('active');
+    if(menuOpen){ navbar.classList.remove('nav-hide'); lastScrollYMobile = window.scrollY; return; }
+    if(window.scrollY > lastScrollYMobile && window.scrollY > 120){
+      navbar.classList.add('nav-hide');
+    } else {
+      navbar.classList.remove('nav-hide');
+    }
+    lastScrollYMobile = window.scrollY;
+  }
+  window.addEventListener('scroll', () => {
+    onScroll();
+    handleMobileHide();
+  });
+  window.addEventListener('resize', handleMobileHide);
   onScroll();
+  handleMobileHide();
 
   // --- Modal logic ---
   const modal = document.getElementById('modal');
@@ -109,7 +126,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector('.navbar-menu');
   toggleBtn.addEventListener('click', () => {
     menu.classList.toggle('active');
-    toggleBtn.classList.toggle('open');
   });
    // Close hamburger menu after clicking a link
   menu.querySelectorAll('a').forEach(link => {
