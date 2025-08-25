@@ -204,7 +204,7 @@ font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
   text-align: left;
   padding: 28px 0;
   letter-spacing: 0.03em;
-  border-radius: 0 0 18px 18px;
+  border-radius: 0 0 6px 6px;
   transition: background 0.3s, box-shadow 0.3s;
 }
 .navbar.scrolled {
@@ -709,6 +709,8 @@ button:hover { background:var(--accent); color:var(--heading-color); }
 
 .navbar { backdrop-filter:none !important; }
 .navbar.scrolled { background:transparent; box-shadow:none; }
+.navbar { border-radius:0 0 6px 6px !important; }
+
 .navbar ul li a { color:var(--accent-hover); }
 .navbar ul li a:hover, .navbar ul li a:focus { background:rgba(255,255,255,0.45); color:var(--heading-color); }
 
@@ -942,3 +944,13 @@ footer { background:var(--accent-hover); color:#EEEAE3; }
 .navbar.scrolled { box-shadow:0 2px 12px rgba(0,0,0,0.12) !important; }
 @media (max-width:700px){ .navbar { box-shadow:none !important; } }
 /* --- End Navbar Shadow Only After Scroll Override --- */
+
+/* --- Navbar hide class transition (applies to all viewports now) */
+.navbar { transition:transform .35s ease; }
+.navbar.nav-hide { transform:translateY(-140%); }
+
+/* Light hero title override to match navbar (white on hero) */
+header h1 { 
+  color:#ffffff !important; 
+  text-shadow:0 3px 12px rgba(0,0,0,0.35); 
+}
