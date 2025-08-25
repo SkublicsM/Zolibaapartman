@@ -257,8 +257,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Contact heading & block
     const contactH2 = document.querySelector('#contact h2'); if(contactH2) contactH2.textContent = translations[lang].contact;
     // Update granular contact labels
-    document.querySelectorAll('.i18n-email-label').forEach(el=>{ if(translations[lang].email) el.textContent = translations[lang].email; });
-    document.querySelectorAll('.i18n-phone-label').forEach(el=>{ if(translations[lang].phone) el.textContent = translations[lang].phone; });
+    const emailLabel = document.querySelector('.i18n-email-label'); if(emailLabel) emailLabel.textContent = translations[lang].email;
+    const phoneLabel = document.querySelector('.i18n-phone-label'); if(phoneLabel) phoneLabel.textContent = translations[lang].phone;
     const englishLabel = document.querySelector('.i18n-english-label'); if(englishLabel) englishLabel.textContent = translations[lang].english;
     const weSpeakSpan = document.querySelector('.i18n-we-speak'); if(weSpeakSpan && translations[lang].weSpeak!==undefined) weSpeakSpan.textContent = translations[lang].weSpeak || translations[lang].english;
     const bookingLabel = document.querySelector('.i18n-booking-label'); if(bookingLabel && translations[lang].bookingLabel) bookingLabel.textContent = translations[lang].bookingLabel;

@@ -1036,3 +1036,13 @@ header h1 {
   .contact-min .contact-line { flex-wrap:wrap; }
 }
 /* --- End Contact Line Layout --- */
+
+/* --- Fullscreen Gallery Modal Override --- */
+.modal { inset:0; width:100vw; height:100vh; padding:0; background:rgba(30,24,19,0.92); }
+.modal-content { max-width:90vw; max-height:86vh; }
+.modal-arrow { background:rgba(0,0,0,0.45); }
+.modal-arrow:hover { background:rgba(0,0,0,0.70); }
+@media (max-width:700px){
+  .modal-content { max-width:94vw; max-height:70vh; }
+}
+/* --- End Fullscreen Gallery Modal Override --- */
