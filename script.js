@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Extend/define translations (keeping previous keys) ADD FULL INDEX KEYS
   const translations = {
     hu: {
-      contact:"Kapcsolat", email:"Email:", phone:"Telefon:", english:"Angolul is beszélünk!", weSpeak:"We speak English!", prices:"Árak", booking:"Foglalás", gallery:"Galéria", apartman:"Apartman", calendar:"Foglalási naptár", map:"Hol található az apartman?", cta:"Lépjen kapcsolatba velünk!", heading:"ZOLIBA' Apartman", gallerySubtitle:"Tekintse meg apartmanjaink képeit!", bookingInfo:"Az alábbi naptárban ellenőrizheti a szabad időpontokat:",
+      contact:"Kapcsolat", email:"Email:", phone:"Telefon:", english:"Angolul is beszélünk!", weSpeak:"We speak English!", prices:"Árak", booking:"Foglalás", gallery:"Galéria", apartman:"Apartman", calendar:"Foglalási naptár", map:"Hol található az apartman?", cta:"Lépjen kapcsolatba velünk!", heading:"ZOLI' BÁ Apartman", gallerySubtitle:"Tekintse meg apartmanjaink képeit!", bookingInfo:"Az alábbi naptárban ellenőrizheti a szabad időpontokat:",
       apartmentSectionTitle:"Az apartman",
       locationTitle:"Elhelyezkedés:",
       locationText:"Apartmanunk Gyöngyösfalu szívében, könnyen megközelíthető, csendes utcában helyezkedik el. Közel Szombathelyhez, Kőszeghez és a számtalan túrázási lehetőséghez. 1,5 kilométeres körzetben éjjel-nappali élelmiszerbolt és dohánybolt illetve számos étterem található.",
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
       markName:"Skublics Mark"
     },
     en: {
-      contact:"Contact", email:"Email:", phone:"Phone:", english:"We speak English!", weSpeak:"", prices:"Prices", booking:"Booking", gallery:"Gallery", apartman:"Apartment", calendar:"Booking Calendar", map:"Where is the apartment?", cta:"Contact us!", heading:"ZOLIBA' Apartment", gallerySubtitle:"View photos of our apartments!", bookingInfo:"You can check available dates in the calendar below:",
+      contact:"Contact", email:"Email:", phone:"Phone:", english:"We speak English!", weSpeak:"", prices:"Prices", booking:"Booking", gallery:"Gallery", apartman:"Apartment", calendar:"Booking Calendar", map:"Where is the apartment?", cta:"Contact us!", heading:"ZOLI' BÁ Apartment", gallerySubtitle:"View photos of our apartments!", bookingInfo:"You can check available dates in the calendar below:",
       apartmentSectionTitle:"The Apartment",
       locationTitle:"Location:",
       locationText:"Our apartment is located in the heart of Gyöngyösfalu on a quiet, easily accessible street. Close to Szombathely, Kőszeg and numerous hiking opportunities. Within 1.5 km you find 24-hour grocery, tobacco shop and several restaurants.",
@@ -333,4 +333,5 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('resize', adjustToTopOffset);
   adjustToTopOffset();
   // --- End Back to Top Button Logic ---
+
 });
